@@ -15,7 +15,7 @@ With a speciallty in being used as context manager:
    :emphasize-lines: 4,7
 
 
-The usage becomes clearer when introducing some functions:
+The usage becomes clearer when introducing some function calls:
 
 .. literalinclude:: examples/use_with2.py
    :language: python
