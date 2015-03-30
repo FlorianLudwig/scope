@@ -1,0 +1,7 @@
+[run]
+source = scope,doc
+
+omit = 
+ doc/conf.py
+ doc/__init__.py
+ doc/examples/__init__.py
