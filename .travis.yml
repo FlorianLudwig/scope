@@ -1,6 +1,11 @@
 language: python
 python: 2.7
 install:
-  - pip install tox
+  - pip install tox coveralls pytest-cov
 script:
   - tox
+  # for coverage
+  - pip install -e .[test]
+  - py.test --cov scope --cov doc
+after_success:
+  coveralls
