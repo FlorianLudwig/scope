@@ -5,7 +5,7 @@ install:
 script:
   - tox
   # for coverage
-  - pip install -e .[test]
+  - pip install -e .
   - py.test --cov scope --cov doc
 after_success:
   coveralls
