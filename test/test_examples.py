@@ -1,6 +1,14 @@
 import os
+import sys
 
 import scope
+
+
+if sys.version_info >= (3,0):
+    from .py3 import exec_
+else:
+    from .py2 import exec_
+
 
 BASE = os.path.abspath(
     os.path.join(
@@ -19,4 +27,4 @@ def test_examples():
     for example in examples:
         code = open(example).read()
         code = compile(code, example, 'exec')
-        exec code in {'scope': scope}
+        exec_(code, {'scope': scope})
