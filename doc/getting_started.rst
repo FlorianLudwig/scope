@@ -4,14 +4,14 @@ Getting Started
 What and Why
 ------------
 
-Scope is a `dependency injection<http://en.wikipedia.org/wiki/Dependency_injection>`_ mechanism for python.
+Scope is a `dependency injection <http://en.wikipedia.org/wiki/Dependency_injection>`_ mechanism for python.
 It solves two things:
 
- * Storing thread-local data in tornado: Somewhere deep down your call stack (within several coroutines) you end up needing the current user name or some request handler.  You may pass these information down the call stack, expanding all function attributes along the way.  Or you inject them.
- * Keepint track of replacable components: Maybe you implement two different login systems and depending on some configuration want to switch that backend.  Injecting the login system instead of importing it where you need it is the scope way to do it.
+ * **Storing thread-local data in tornado**: Somewhere deep down your call stack (within several coroutines) you end up needing the current user name or some request handler.  You may pass these information down the call stack, expanding all function attributes along the way.  Or you inject them.
+ * **Keeping track of replacable components**: Maybe you implement two different login systems and depending on some configuration want to switch that backend.  Injecting the login system instead of importing it where you need it is the scope way to do it.
 
 
-.. note:: ``Scope`` was written for `tornado<http://www.tornadoweb.org/>`_.  It can be used outside of tornado but it depends on tornado.  The examples are not tornado specific in any way.
+.. note:: ``Scope`` was written for `tornado <http://www.tornadoweb.org/>`_.  It can be used outside of tornado but it depends on tornado.  The examples are not tornado specific in any way.
 
 
 In Action
